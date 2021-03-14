@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { uuid } from 'uuidv4';
 
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
@@ -30,6 +31,26 @@ class FakeUsersRepository implements IUsersRepository {
     const user = new User();
 
     return user;
+  }
+
+  public async find(): Promise<User[]> {
+    throw new Error('Method not implemented.');
+  }
+
+  public async findById(id: string): Promise<User | undefined> {
+    throw new Error('Method not implemented.');
+  }
+
+  public async findByIds(ids: string[]): Promise<User[]> {
+    throw new Error('Method not implemented.');
+  }
+
+  public async findByUsername(username: string): Promise<User | undefined> {
+    throw new Error('Method not implemented.');
+  }
+
+  public async delete(id: string): Promise<void> {
+    throw new Error('Method not implemented.');
   }
 }
 
